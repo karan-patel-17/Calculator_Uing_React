@@ -1,0 +1,120 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+  background: linear-gradient(to right, cyan, rgb(102, 255, 255), rgb(162, 255, 255));
+}
+
+/* body {
+  animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #3498db;
+  }
+  50% {
+    background-color: #e74c3c;
+  }
+  100% {
+    background-color: #3498db;
+  }
+} */
+
+.calculator-grid{
+  display: grid;
+  margin-top: 4rem;
+  grid-template-columns: repeat(4,6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem); 
+  justify-content: center;
+}
+
+.calculator-grid > button{
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;;
+  outline: none;
+  background-color: rgb(255, 255, 255, .75);
+  margin-top: .5rem;
+  margin-left: .5rem;
+  transition: transform 0.3s ease;
+}
+
+.calculator-grid > button:hover, .calculator-grid > button:focus{
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+.calculator-grid > button:hover{
+  transform: scale(0.9);
+}
+
+.output{
+  grid-column: 1 / -1;
+  background-color: rgb(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-left: .5rem;
+}
+.output .previous-output{
+  color: white;
+  font-size: 1.2rem;
+}
+
+.output .current-output{
+  color: white;
+  font-size: 2.5rem;
+}
